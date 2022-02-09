@@ -27,7 +27,7 @@ body {
 
 header {
   text-align: center;
-  margin: 30px 0 15px;
+  margin: 0 0 15px;
 }
 
 header h1 span:first-child {
@@ -81,15 +81,10 @@ header p {
   row-gap: 30px;
 }
 
-/* .row .col .red {
-  margin-bottom: 20px;
-} */
-
 .row .col .card {
   display: flex;
   flex-direction: column;
   padding: 26px 25px;
-
   background-color: white;
   position: relative;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -97,13 +92,6 @@ header p {
   max-width: 350px;
   border-radius: 4px;
 }
-
-/* .row .cyan {
-  margin-left: 20px;
-}
-.row .blue {
-  margin-right: 20px;
-} */
 
 .row .blue {
   border-top: 3px solid hsl(212, 86%, 64%);
@@ -121,7 +109,7 @@ header p {
 .row .col .info {
   width: 300px;
 }
-.row .col .card h3 {
+.row .col .card h2 {
   margin: 0;
   font-size: 18px;
 }
@@ -138,7 +126,3 @@ header p {
 
   max-width: 100%;
 }
-
-/* .row .col {
-  margin-left:40px;
-} */
