@@ -15,19 +15,24 @@ html {
 }
 
 body {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
   font-family: "Poppins", sans-serif;
   background-color: hsl(0, 0%, 98%);
 }
 
 .container {
   max-width: 1440px;
+  min-width: 375px;
   padding: 0 40px;
   margin: 0 auto;
 }
 
-header {
+header,
+main {
   text-align: center;
-  margin: 30px 0 15px;
+  margin: 0 0 40px;
 }
 
 header h1 span:first-child {
@@ -43,102 +48,83 @@ header h1 span:last-child {
 
 header p {
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: hsl(229, 6%, 66%);
   letter-spacing: -0.3px;
 }
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  column-gap: 30px;
+
+.container main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 0 auto;
 }
 
-@media (max-width: 1100px) {
-  .row {
-    flex-direction: column;
-  }
-  .row .col {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 375px) {
-  .container {
-    width: 375px;
-    padding: 0 50px;
-    margin: 0 auto;
-  }
-  .row {
-    flex-direction: column;
-  }
-}
-
-.row .col {
+.col {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   row-gap: 30px;
 }
 
-/* .row .col .red {
-  margin-bottom: 20px;
-} */
-
-.row .col .card {
+.card {
   display: flex;
   flex-direction: column;
   padding: 26px 25px;
-
   background-color: white;
   position: relative;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  height: 235px;
-  max-width: 350px;
+  min-height: 235px;
+  min-width: 350px;
   border-radius: 4px;
+  align-items: center;
 }
 
-/* .row .cyan {
-  margin-left: 20px;
-}
-.row .blue {
-  margin-right: 20px;
-} */
-
-.row .blue {
+.blue {
   border-top: 3px solid hsl(212, 86%, 64%);
 }
-.row .red {
+.red {
   border-top: 3px solid hsl(0, 78%, 62%);
 }
-.row .orange {
+.orange {
   border-top: 3px solid hsl(34, 97%, 64%);
 }
-.row .cyan {
+.cyan {
   border-top: 3px solid hsl(180, 62%, 55%);
 }
 
-.row .col .info {
+.card .info {
   width: 300px;
 }
-.row .col .card h3 {
+.card h2 {
   margin: 0;
-  font-size: 18px;
+  font-size: 15px;
+  text-align: left;
 }
-.row .col .card p {
+.card p {
   line-height: 1.5;
   color: hsl(229, 6%, 66%);
-  font-size: 12px;
+  font-size: 0.96em;
+  text-align: left;
 }
 
-.row .card img {
+.card img {
   position: absolute;
   right: 25px;
   bottom: 26px;
-
   max-width: 100%;
 }
 
-/* .row .col {
-  margin-left:40px;
-} */
+@media (max-width: 1100px) {
+  .container {
+    margin: 50px 0 50px 0;
+    padding: 0 30px;
+  }
+  .container main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+}
