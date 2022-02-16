@@ -62,10 +62,7 @@ header p {
 }
 
 .col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  row-gap: 30px;
+  align-self: center;
 }
 
 .card {
@@ -86,6 +83,7 @@ header p {
 }
 .red {
   border-top: 3px solid hsl(0, 78%, 62%);
+  margin-bottom: 30px;
 }
 .orange {
   border-top: 3px solid hsl(34, 97%, 64%);
